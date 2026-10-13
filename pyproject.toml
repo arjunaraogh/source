@@ -1,0 +1,19 @@
+[project]
+name = "building-a-first-adk-agent"
+version = "0.1.0"
+description = "Lab: Building a First ADK Agent Across Multiple Model Backends"
+requires-python = ">=3.10"
+
+dependencies = [
+    "google-adk>=2.0.0",
+    "python-multipart>=0.0.9",
+    "python-dotenv>=1.0.1",
+    # Backs the optional `LiteLlm` connector (see "Explore Further" in the lab
+    # guide), which runs the agent on a non-Gemini model.
+    #
+    # SECURITY PIN - do not widen. 1.82.7 and 1.82.8 were malicious PyPI
+    # releases (PYSEC-2026-2, March 2026, credential-harvesting); see the Google
+    # adk-python advisory. The exclusions follow that advisory and keep the safe
+    # intermediate releases.
+    "litellm>=1.75.5,!=1.82.7,!=1.82.8",
+]
