@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeanBotics</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>&#9749; BeanBotics</h1>
+        <p class="tagline">AI-Powered Coffee, Perfectly Brewed</p>
+    </header>
+
+    <main>
+        <section id="menu-section">
+            <h2>Menu</h2>
+            <div class="pricing-controls">
+                <div class="pricing-heading">
+                    <label for="pricing-slider">Time</label>
+                    <output id="pricing-time" for="pricing-slider">--:--</output>
+                    <span id="pricing-timezone"></span>
+                    <span id="pricing-mode">Server time</span>
+                </div>
+                <div class="pricing-slider-row">
+                    <input id="pricing-slider" type="range" min="0" max="1439" step="1" value="0" disabled>
+                    <button id="pricing-reset" type="button" title="Return to server time" disabled>Use Server Time</button>
+                </div>
+                <div class="pricing-indicators">
+                    <span id="pricing-tier" class="pricing-tier" aria-live="polite"></span>
+                    <span id="pricing-status" role="status"></span>
+                </div>
+            </div>
+            <div id="menu-list" class="menu-grid">
+                <p class="loading">Loading menu...</p>
+            </div>
+        </section>
+
+        <section id="orders-section">
+            <h2>Order Queue</h2>
+            <div id="orders-list">
+                <p class="empty-state">No orders yet. Pick a drink from the menu!</p>
+            </div>
+        </section>
+
+        <section id="financials-section">
+            <h2>Financial Dashboard</h2>
+            <div class="metrics-row">
+                <div class="metric-card">
+                    <span class="metric-label">Revenue</span>
+                    <span class="metric-value" id="metric-revenue">$0.00</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-label">COGS</span>
+                    <span class="metric-value" id="metric-cogs">$0.00</span>
+                </div>
+                <div class="metric-card metric-card--margin">
+                    <span class="metric-label">Margin</span>
+                    <span class="metric-value" id="metric-margin">$0.00</span>
+                </div>
+            </div>
+            <div class="tier-revenue-row">
+                <span>Peak Revenue <strong id="metric-peak-revenue">$0.00</strong></span>
+                <span>Off-Peak Revenue <strong id="metric-off-peak-revenue">$0.00</strong></span>
+            </div>
+            <div id="financials-table-container">
+                <p class="empty-state">Place an order to see per-order financials.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>BeanBotics Corporation &mdash; Spec-Driven Development Lab</p>
+    </footer>
+
+    <div id="confirm-overlay" class="overlay hidden">
+        <div class="overlay-content">
+            <h3>Review Your Order</h3>
+            <div id="confirm-summary"></div>
+            <div class="overlay-actions">
+                <button id="confirm-back-btn" class="back-btn">Go Back</button>
+                <button id="confirm-order-btn" class="confirm-btn">Confirm Order</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
