@@ -1,0 +1,18 @@
+[project]
+name = "building-an-adk-evaluation-pipeline"
+version = "0.1.0"
+description = "Lab: Building an ADK Evaluation Pipeline"
+requires-python = ">=3.10"
+
+dependencies = [
+    "google-adk[eval]>=2.0.0",
+    "python-multipart>=0.0.9",
+    "python-dotenv>=1.0.1",
+    "litellm>=1.0,!=1.82.7,!=1.82.8",
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0,<1.0.0",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+pythonpath = ["."]

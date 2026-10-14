@@ -1,0 +1,79 @@
+{
+  "eval_set_id": "eval_set_1",
+  "name": "eval_set_1",
+  "eval_cases": [
+    {
+      "eval_id": "How_long_do_I_have_to_return_something",
+      "conversation": [
+        {
+          "invocation_id": "e-89813591-e7ec-487f-b342-f2966cad73bd",
+          "user_content": {
+            "parts": [
+              {
+                "text": "How long do I have to return something?"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "You have 30 days from the date of delivery to return an item for a full refund.",
+                "thought_signature": "EvICCu8CAWkUfROU6tkFN8qFBw5xp_LfSplRb2QoWVI7wTFMGKC8zNvdTVGGHecZEfmZWv_qBs_Qs_2BYZxcEJgW7pgM7jHHeSAZTX1cXWt648pzw4KbBbq2w_OS3SJvZ2VWnmCdPVY4D9R4IW0A0WqRm7DR3MQDc9PpOuOnfGbKuX13xQHYJdfhiaJEzoJl83mOI80BJueKPkGMNce0xCu4CebbSgPpWMuymd8JxCROX13bP1Y4zfbMBalrHtEQwD6tNTLP9NyKzQAz2w5aD_rMVREDwPK25NNWm86Xt8cWMrrjnwDBILZj2x-1xh2KeFZrQkDucQ5YhXBEGgJkGsRX8LYGfMLmBABNGhxa8C01mppl4FZle25ObZgbUt_kWjcB-YYV07eL-qR4EneHwcEUYCdxskJBVFXBZsyq0aIoJzsu-IQqpKMNynjRDX2GqM6m7H-KX7LXqx0aKsCqjxhO-_k3jt7XEAxn4xgYAkmtx_ptgg=="
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "policy_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_759394",
+                        "args": {
+                          "topic": "returns"
+                        },
+                        "name": "get_policy"
+                      },
+                      "thought_signature": "Eq8ECqwEAWkUfRMDrhXHN0PEKkPzhBVrH60zBRUDBImp_irf3xe8UtRt3WgUXwsVcAy5pV6hopoMtTWspRrK1CBNZ2OZBnheHJwvt4BcIZISaR88Xyb5RDJOuIibVAzxj1Rw9oceLmLvgwtN-oXWdER3BrqgcHOBU2wWyNhnfHH-Q5uElyt6qFwWm4oIYLzM1-tB0lypByNyLawsrTdQ6o0b88V-O1oYNHUuThg_a_4yFxl43iY-QgSIxnJRVoIcZMxCFWgaYem4xjdKsCdCeHssvmHA1_FEqtfOmnqyr7Q3GAIfATrakIvtKeqMuwdbKmm6ky43qQ6SPHaOMeFkvTFG8RpfBeOnecFFm-cxwhGkU1OqBtX2ojLOKWjhKqEhypBY7TO1M_v_w3CfuaAi948hxTSTbqX6sxsfFApcE7kmrSl1yphJeZCH3NiuWel-p646Gu3a01jarL9IjNJ-QnA9tTBkwPrXYInBRfWYq444rrhNP13iTiKUSCT4j4yCA7NISgmC3kE9sY6icgarGu0Z7kDR0ZMpgu9U8AP8g-7xMO23xviqfqoOKNw2FYnpOBegVDSIJxFh1dYSAW4V2Ry_7BEN6LUw1m80z6P3JL3zxFlYt4Q2Zqv6k05gTKEgxVjux7hk7snZ7z_YvZ-i0rRYDKYkpsbU2D1WoeNKc-rnyyeVNGaa11jLFuedSOzZvPpdkW8ZhnKCtxV4ep_3qZmo5xtWs76ZFTKi8qeef8jaxQ=="
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "policy_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_759394",
+                        "name": "get_policy",
+                        "response": {
+                          "status": "success",
+                          "topic": "returns",
+                          "policy": "You have 30 days from delivery to return an item for a full refund."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1791951479.5485954
+        }
+      ],
+      "session_input": {
+        "app_name": "policy_agent",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1791951887.25712
+    }
+  ],
+  "creation_timestamp": 1791951742.028879
+}

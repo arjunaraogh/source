@@ -1,0 +1,86 @@
+{
+  "eval_set_id": "policy_agent_evalset",
+  "name": "Policy agent evaluation set",
+  "description": "Evaluation cases for the store-policy agent.",
+  "eval_cases": [
+    {
+      "evalId": "returns_policy",
+      "conversation": [
+        {
+          "invocationId": "2ca32009-4e5c-4102-a48e-146cbc0a01bf",
+          "userContent": {
+            "parts": [
+              {
+                "text": "How long do I have to return an item?"
+              }
+            ],
+            "role": "user"
+          },
+          "finalResponse": {
+            "parts": [
+              {
+                "text": "You have 30 days from delivery to return an item for a full refund."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediateData": {
+            "toolUses": [
+              {
+                "args": {
+                  "topic": "returns"
+                },
+                "name": "get_policy"
+              }
+            ],
+            "toolResponses": [],
+            "intermediateResponses": []
+          },
+          "creationTimestamp": 1779553052.713482
+        }
+      ],
+      "creationTimestamp": 1779553052.7134857,
+      "finalSessionState": {}
+    },
+    {
+      "evalId": "shipping_policy",
+      "conversation": [
+        {
+          "invocationId": "dc7e0659-3b93-4bb7-8587-683f4221dcf3",
+          "userContent": {
+            "parts": [
+              {
+                "text": "How long does standard shipping take?"
+              }
+            ],
+            "role": "user"
+          },
+          "finalResponse": {
+            "parts": [
+              {
+                "text": "Standard shipping takes 5 business days; expedited takes 2."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediateData": {
+            "toolUses": [
+              {
+                "args": {
+                  "topic": "shipping"
+                },
+                "name": "get_policy"
+              }
+            ],
+            "toolResponses": [],
+            "intermediateResponses": []
+          },
+          "creationTimestamp": 1779553052.7135222
+        }
+      ],
+      "creationTimestamp": 1779553052.7135248,
+      "finalSessionState": {}
+    }
+  ],
+  "creation_timestamp": 1779553052.7135267
+}
