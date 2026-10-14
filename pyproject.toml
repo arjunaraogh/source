@@ -1,0 +1,12 @@
+[project]
+name = "guardrails-with-callbacks-and-plugins"
+version = "0.1.0"
+description = "Lab: Adding Guardrails with Callbacks and Plugins"
+requires-python = ">=3.10"
+
+dependencies = [
+    "google-adk>=2.0.0",
+    "python-multipart>=0.0.9",
+    "python-dotenv>=1.0.1",
+    "litellm>=1.0,!=1.82.7,!=1.82.8",
+]
