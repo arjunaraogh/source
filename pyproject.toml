@@ -1,0 +1,14 @@
+[project]
+name = "multi-agent-a2a-workflow"
+version = "0.1.0"
+description = "Lab: Building a Multi-Agent A2A Workflow"
+requires-python = ">=3.10"
+
+dependencies = [
+    "google-adk[a2a]>=2.0.0",
+    "a2a-sdk[http-server]>=0.2.0",
+    "python-multipart>=0.0.9",
+    "python-dotenv>=1.0.1",
+    "litellm>=1.0,!=1.82.7,!=1.82.8",
+    "uvicorn>=0.30.0",
+]
